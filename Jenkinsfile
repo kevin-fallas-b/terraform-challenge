@@ -1,16 +1,17 @@
 pipeline {
-    agent any
+    agent {
+        label 'terraform-agent'
+    }
     stages {
         stage('Execute terraform stages') {
             when { branch "main" }
             steps {
                 bat 'cd terraform'
-                terraform 'init'
+                bat 'terraform init'
+                //bat 'terraform graph | dot -Tsvg > graph.svgt'
                 bat 'terraform plan'
                 bat 'terraform apply --auto-approve'
             }
         }
-
-
     }
 }
