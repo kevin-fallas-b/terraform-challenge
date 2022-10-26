@@ -4,10 +4,10 @@ pipeline {
         stage('Execute terraform stages') {
             when { branch "main" }
             steps {
-                sh 'cd terraform'
-                sh 'terraform init'
-                sh 'terraform plan'
-                sh 'terraform apply --auto-approve'
+                bat 'cd terraform'
+                bat 'terraform init'
+                bat 'terraform plan'
+                bat 'terraform apply --auto-approve'
             }
         }
 
