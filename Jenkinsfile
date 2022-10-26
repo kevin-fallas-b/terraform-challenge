@@ -5,7 +5,7 @@ pipeline {
             when { branch "main" }
             steps {
                 bat 'cd terraform'
-                bat 'terraform init'
+                terraform 'init'
                 bat 'terraform plan'
                 bat 'terraform apply --auto-approve'
             }
