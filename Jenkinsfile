@@ -1,4 +1,7 @@
 pipeline {
+    agent {
+        any
+    }
     stages {
         stage('Execute terraform stages') {
             when { branch "main" }
