@@ -7,6 +7,14 @@
     min-width: 300px;
   }
   
+  body{
+    background-color: antiquewhite;
+  }
+
+  h1{
+    text-align: center;
+  }
+
   /* Style the input fields */
   input {
     padding: 10px;
