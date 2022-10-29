@@ -13,7 +13,7 @@ pipeline {
             when { branch "main" }
             steps {
                 dir ('terraform'){
-                    //bat 'terraform graph | dot -Tsvg > graph.svgt'
+                    bat 'terraform graph | dot -Tsvg > graph.svgt'
                 }
             }
         }
